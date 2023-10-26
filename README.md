@@ -86,11 +86,9 @@ void FillArrayByUser(int[] arr)
 Same with a random filling:
 
 ```
-static void FillArrayByRandom(int[] arr)
+static void FillArrayByRandom(int[] arr, int minValue, int maxValue)
 {
     Random r = new();
-    int minValue = -100;
-    int maxValue = 100;
 
     for (int i = 0; i < arr.Length; i++)
         arr[i] = r.Next(minValue, maxValue + 1); 
