@@ -72,3 +72,27 @@ void PrintArray(int[] array)
     Console.WriteLine($"{array[i]}");
 }
 ```
+
+Function for filling an array by user:
+
+```
+void FillArrayByUser(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+        arr[i] = GetUserNumber();
+}
+```
+
+Same with a random filling:
+
+```
+static void FillArrayByRandom(int[] arr)
+{
+    Random r = new();
+    int minValue = -100;
+    int maxValue = 100;
+
+    for (int i = 0; i < arr.Length; i++)
+        arr[i] = r.Next(minValue, maxValue + 1); 
+}
+```
